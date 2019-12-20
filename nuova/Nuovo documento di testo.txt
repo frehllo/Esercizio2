@@ -1,0 +1,61 @@
+{
+        public string Nome { get; set; }
+        public double Prezzo { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nome}: {Prezzo.ToString()} Euro";
+        }
+    }
+}
+va messo sulla classe merende
+--------
+ List<Merenda> Merende = new List<Merenda>();
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Btn_Carica_Click(object sender, RoutedEventArgs e)
+        {
+            CaricaMerende();
+            //Task.Factory.StartNew(CaricaMerende); 
+        }
+
+        public void CaricaMerende()
+        {
+            string line;
+            StreamReader sr = new StreamReader("ListaMerende.csv");
+            sr.ReadLine();
+            while ((line = sr.ReadLine()) != null)
+            {
+                try
+                {
+                    //Creo una istanza 
+                    Merenda m = new Merenda();
+                    //Vettore
+                    string[] campi = line.Split(';');
+                    m.Nome = campi[0];
+                    double Prezzo = Convert.ToDouble(campi[1]);
+                    m.Prezzo = Prezzo;
+                    Merende.Add(m);
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                    break;
+                }
+
+                
+            }
+
+            foreach (Merenda m in Merende)
+            {
+                Lst_MerendeDisponibili.Items.Add(m);
+            }
+        }
+
+-----------------------
+va messo su main window
