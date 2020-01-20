@@ -7,11 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500">
     <Grid>
-        <Label Name="lbl_ris" Content="" HorizontalAlignment="Left" Margin="58,239,0,0" VerticalAlignment="Top" Width="394" Height="82"/>
-        <Button Content="Calcola" HorizontalAlignment="Left" Margin="58,148,0,0" VerticalAlignment="Top" Width="169" Height="53" Click="Button_Click"/>
-        <ComboBox Name="cmb_operazioni" HorizontalAlignment="Left" Margin="274,148,0,0" VerticalAlignment="Top" Width="178" Height="53"/>
-        <TextBox Name="txt_n1" HorizontalAlignment="Left" Height="53" Margin="58,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="169"/>
-        <TextBox Name="txt_n2" HorizontalAlignment="Left" Height="53" Margin="274,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178"/>
+        <Label Name="lbl_ris" Content="" HorizontalAlignment="Left" Margin="58,239,0,0" VerticalAlignment="Top" Width="394" Height="82" Background="#FFB8203B" FontSize="24"/>
+        <Button Content="Calcola" HorizontalAlignment="Left" Margin="58,148,0,0" VerticalAlignment="Top" Width="169" Height="53" Click="Button_Click" FontFamily="Shonar Bangla" FontSize="24">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF7CBFF7" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox Name="cmb_operazioni" HorizontalAlignment="Left" Margin="274,148,0,0" VerticalAlignment="Top" Width="178" Height="53">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF7CBFF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <TextBox Name="txt_n1" HorizontalAlignment="Left" Height="53" Margin="58,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="169" Background="#FFA26712" FontSize="24" FontFamily="Shonar Bangla"/>
+        <TextBox Name="txt_n2" HorizontalAlignment="Left" Height="53" Margin="274,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Background="#FFA26712" FontSize="24" FontFamily="Shonar Bangla"/>
 
     </Grid>
 </Window>
